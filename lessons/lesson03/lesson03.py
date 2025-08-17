@@ -273,3 +273,16 @@ for item in t:
 #     d[status]()
 # except:
 #     print("Other error")
+
+# And one of another feature is that we can put conditions to it.
+# If we are not interested in the parameter, we can again use our “_”
+for item in t:
+    match item:
+        case ["evening", action] if action not in ["work", "study"]:
+            print(f"You almost finished the day! Now {action}!")
+        case ["evening", _]:
+            print("Come on, you deserve some rest!")
+        case [time, action]:
+            print(f"Good {time}! It is time to {action}!")
+        case _:
+            print("The time is invalid.")
