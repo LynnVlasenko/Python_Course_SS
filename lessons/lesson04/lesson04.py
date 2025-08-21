@@ -95,8 +95,8 @@ l = [1,2,3, [10, 20,30]]
 # print(l, list(l))
 # l = enumerate([10, 20, 30, 40, 50])
 # print(l, list(l))
-# for elemnt  in enumerate([10, 20, 30, 40, 50]):
-#     print(f"{elemnt=}")
+for elemnt  in enumerate([10, 20, 30, 40, 50]):
+    print(f"{elemnt=}")
 
 # таки
 # a, b = 1,2
@@ -167,9 +167,10 @@ s = 0
 for i in range(10):
     s += i
     print(f"{i=} {s=}")
-    if s % 2:  # (тобто коли будуть не парні - то сюди не зайде - продовжить лише коли парні і зробить continue)
+    if s % 2:  # (тобто коли будуть парні - то спрацює continue і почне ітерацію заново - код нижче continue (print("text")) НЕ виконається
         continue
-    print("text") # цей код виконається лише, коли виконається умова if s % 2: і спрацює continue 
+        print("text") # важливо!!! код, який має виконатись після continue - має бути не на одному рівні по табу з continue а вийти на таб назад (як в наступному рядку). Код синтаксично прямо під continue - ніколи не виконається!
+    print("text") # цей код виконається лише, коли не виконається умова if s % 2: і не спрацює continue
 else:
     print("end")
 print("end script")
@@ -262,11 +263,13 @@ print("end script")
 #         break
 #     print(n)
 
-# from random import randint
-# a = []
-# for i in range(10):
-#     a.append(randint(-10, 10))
-# print(a)
+from random import randint
+a = []
+for i in range(10):
+    a.append(randint(-10, 10))
+print(a)
+print(type(randint(-10, 10)))
+# 
 # for n in a:
 #     if n%2:
 #         print(n,"is odd")
