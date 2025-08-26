@@ -230,17 +230,17 @@ print(average)
 # Option	2
 # Відповідь:(penalty regime: 0 %)
 
-word = input()
+# word = input()
 
-vowels_number = 0 
-for i in word:
-    if i in ["a", "e", "i", "o", "u"]:
-        vowels_number += 1
-print(vowels_number)
+# vowels_number = 0 
+# for i in word:
+#     if i in ["a", "e", "i", "o", "u"]:
+#         vowels_number += 1
+# print(vowels_number)
 
 
-word = input()
-print(sum(i in "aeiou" for i in word))
+# word = input()
+# print(sum(i in "aeiou" for i in word))
 
 
 # You are given a number as a string stored in the variable binary_number, which has already been read from input(). Write code that creates a list of boolean values by iterating through this number: convert each 1 into True and each 0 into False. Finally, print this list.
